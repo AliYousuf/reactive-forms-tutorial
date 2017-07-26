@@ -9,13 +9,13 @@
         <label>Name
           <input type="text" formControlName="name">
         </label>
-        <div class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">{{ titleAlert }}</div>
+        <div class="alert" *ngIf="!rForm.get('name').valid && rForm.get('name').touched">{{ titleAlert }}</div>
 
 
         <label>Description
           <textarea formControlName="description"></textarea>
         </label>
-        <div class="alert" *ngIf="!rForm.controls['description'].valid && rForm.controls['description'].touched">You must specify a description that's between 30 and 500 characters.</div>
+        <div class="alert" *ngIf="!rForm.get('description').valid && rForm.get('description').touched">You must specify a description that's between 30 and 500 characters.</div>
 
 
         <label for="validate">Minimum of 3 Characters</label>
